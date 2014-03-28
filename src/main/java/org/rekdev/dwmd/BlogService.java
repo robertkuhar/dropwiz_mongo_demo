@@ -32,8 +32,7 @@ public class BlogService extends Service<BlogConfiguration> {
         MongoManaged mongoManaged = new MongoManaged( mongo );
         environment.manage( mongoManaged );
         environment.addHealthCheck( new MongoHealthCheck( mongo ) );
-        environment.addResource( new IndexResource() );
-
+        environment.addResource( new IndexResource( blogs ) );
         environment.addResource( new BlogResource( blogs ) );
     }
 
