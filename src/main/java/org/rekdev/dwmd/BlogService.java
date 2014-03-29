@@ -13,12 +13,12 @@ import com.yammer.dropwizard.config.*;
 public class BlogService extends Service<BlogConfiguration> {
 
     public static void main( String[] args ) throws Exception {
-        new BlogService().run( new String[] { "server" } );
+        new BlogService().run( args.length != 0 ? args : new String[] { "server" } );
     }
 
     @Override
     public void initialize( Bootstrap<BlogConfiguration> bootstrap ) {
-        bootstrap.setName( "blog" );
+        bootstrap.setName( "dropwiz_mongo_demo" );
     }
 
     @Override

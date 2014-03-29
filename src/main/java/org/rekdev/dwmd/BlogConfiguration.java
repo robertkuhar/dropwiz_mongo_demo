@@ -8,6 +8,6 @@ import com.yammer.dropwizard.config.*;
 public class BlogConfiguration extends Configuration {
     @JsonProperty
     @NotEmpty
-    public String mongoURI = "mongodb://dwmdapp:ca!!0fDuty@bobk-mbp.local,bobk-mbp.local:27018,bobk-mbp.local:27020/dropwiz_mongo_demo";
+    public String mongoURI = "mongodb://localhost";
 
 }
